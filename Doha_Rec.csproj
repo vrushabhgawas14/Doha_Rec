@@ -100,6 +100,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitattributes" />
+    <Content Include="FileCreation\RBI_Record_Matching.aspx" />
+    <Content Include="FileUpload\RBI_Record_Upload.aspx" />
     <Content Include="Pages\About.aspx" />
     <Content Include="Admin\AddEditUser.aspx" />
     <Content Include="Admin\Css\AddEditUser.css" />
@@ -212,6 +214,20 @@
       <DependentUpon>HouseKeeping.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="FileCreation\RBI_Record_Matching.aspx.cs">
+      <DependentUpon>RBI_Record_Matching.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileCreation\RBI_Record_Matching.aspx.designer.cs">
+      <DependentUpon>RBI_Record_Matching.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileUpload\RBI_Record_Upload.aspx.cs">
+      <DependentUpon>RBI_Record_Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileUpload\RBI_Record_Upload.aspx.designer.cs">
+      <DependentUpon>RBI_Record_Upload.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
