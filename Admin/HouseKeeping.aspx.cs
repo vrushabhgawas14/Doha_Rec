@@ -68,7 +68,7 @@ namespace Doha_Rec.Admin
             string role = gridRow.Cells[1].Text;
             string email = gridRow.Cells[2].Text;
 
-            Response.Write("Selected UserName: " + userName + "| R: " + role + "| E: " + email);
+            Response.Write("Selected UserName: " + userName + " | " + role + " | " + email);
         }
 
         protected void GridView2_PageIndexChanging(object sender, GridViewPageEventArgs e)

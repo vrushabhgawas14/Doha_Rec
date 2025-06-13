@@ -49,10 +49,10 @@
         <nav class="d-flex justify-content-between p-1">
             <a class="navbar-brand fs-4 fw-bold px-2 text-b align-content-center" href="/">LMCC</a>
             <div class="d-flex flex-column align-items-end gap-0 px-2">
-                <div class="fs-6">
+                <div class="fs-6 fw-bold">
                     <span>Welcome,</span>
                     <span class="text-decoration-underline"><%= Session["user"] != null ? Session["user"].ToString() : "Guest" %></span>
-                    <span>| Role : Developer |</span>
+                    <span>| Role : <%= Session["user"] != null ? Session["userRole"].ToString() : "Guest" %> |</span>
                     <span>
                         <%: DateTime.Now.DayOfWeek %>, <%: DateTime.Now.ToLongDateString() %>
                     </span>

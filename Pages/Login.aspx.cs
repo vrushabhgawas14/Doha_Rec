@@ -40,7 +40,7 @@ namespace Doha_Rec
 
         protected bool isValidUserAsync(string userName, string password)
         {
-            string sqlQuery = "SELECT Username FROM RegisteredUsers WHERE Username=@username and Password=@password";
+            string sqlQuery = "SELECT Username, Role FROM RegisteredUsers WHERE Username=@username and Password=@password";
             SqlConnection sqlConnection = new SqlConnection(connString);
             try
             {
@@ -56,6 +56,7 @@ namespace Doha_Rec
                     while (sqlDataReader.Read())
                     {
                         Session["user"] = sqlDataReader.GetString(0);
+                        Session["userRole"] = sqlDataReader.GetString(1);
                     }
 
                     return true;
