@@ -11,6 +11,7 @@ Content/*.map linguist-vendored
 Scripts/*.js linguist-vendored
 Scripts/*.map linguist-vendored
 
+# Hide Files Inside Sub Folders of Scripts
 Scripts/**/*.js linguist-vendored
 Scripts/**/*.map linguist-vendored
 
