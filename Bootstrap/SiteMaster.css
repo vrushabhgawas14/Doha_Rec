@@ -1,0 +1,52 @@
+﻿/* Navbar */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-menu {
+    max-height: calc(2.2rem * 5);
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #bfc4dc;
+    border:1px solid black;
+    /*            min-width : 250px;*/
+    /*            max-width : 350px;*/
+}
+
+.dropdown-item{
+    color:black;
+}
+
+.dropdown-item:hover {
+    background-color: #979db8;
+    color:black;
+    transition:ease-in-out;
+    transition-duration:0.1s;
+}
+
+.dropdown-item:focus {
+    background-color: #bfc4dc;
+    color: black;
+    font-weight:400;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+    background: #bfc4dc;
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background-color: #252836;
+    border-radius: 10px;
+    cursor: pointer;
+}

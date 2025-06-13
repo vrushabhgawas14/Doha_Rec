@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Doha_Rec.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %></title>
+
+    <%--<asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>--%>
+    <link href="/Bootstrap/Css/bootstrap.min.css" rel="stylesheet" />
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link href="/Bootstrap/SiteMaster.css" rel="stylesheet" type="text/css" />
+    <style>
+        body{
+            background : #E7E7FF
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <%--Navbar--%>
+        <nav class="d-flex justify-content-between p-1">
+            <a class="navbar-brand fs-4 fw-bold px-2 text-b align-content-center" href="/">LMCC</a>
+            <div class="d-flex flex-column align-items-end gap-0 px-2">
+                <div class="fs-6">
+                    <span>Welcome,</span>
+                    <span class="text-decoration-underline"><%= Session["user"] != null ? Session["user"].ToString() : "Guest" %></span>
+                    <span>| Role : Developer |</span>
+                    <span>
+                        <%: DateTime.Now.DayOfWeek %>, <%: DateTime.Now.ToLongDateString() %>
+                    </span>
+                </div>
+                <div class="fs-5 fw-bold">Reconciliation</div>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+          <div class="container-fluid">
+            <div class="navbar-collapse d-flex justify-content-between align-items-start" id="navbarNavDropdown">
+              <ul class="navbar-nav nav-underline d-flex flex-row flex-wrap">
+                  <%--Home--%>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" runat="server" href="#">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Home Action 1</a></li>
+                        <li><a class="dropdown-item" href="#">Home Action 2</a></li>
+                        <li><a class="dropdown-item" href="#">Home Action 3</a></li>
+                        <li><a class="dropdown-item" href="#">Home Action 4</a></li>
+                        <li><a class="dropdown-item" href="#">Home Action 5</a></li>
+                        <li><a class="dropdown-item" href="#">Home Action 6</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" runat="server" href="#">Master</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Master Action 1</a></li>
+                        <li><a class="dropdown-item" href="#">Master Action 2</a></li>
+                        <li><a class="dropdown-item" href="#">Master Action 3</a></li>
+                        <li><a class="dropdown-item" href="#">Master Action 4</a></li>
+                        <li><a class="dropdown-item" href="#">Master Action 5 Master Action 5 Master Action 5</a></li>
+                        <li><a class="dropdown-item" href="#">Master Action 6</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" runat="server" href="#">Transactions</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Transactions Action 1</a></li>
+                        <li><a class="dropdown-item" href="#">Transactions Action 2</a></li>
+                        <li><a class="dropdown-item" href="#">Transactions Action 3</a></li>
+                        <li><a class="dropdown-item" href="#">Transactions Action 4</a></li>
+                        <li><a class="dropdown-item" href="#">Transactions Action 5</a></li>
+                        <li><a class="dropdown-item" href="#">Transactions Action 6</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#">File Creation</a>
+                   <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action 1</a></li>
+                    <li><a class="dropdown-item" href="#">Action 6</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#">File Upload</a>
+                </li>
+                  
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#">Reports</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#">Audit Trail</a>
+                </li>
+                  
+                  <%--ADMIN--%>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="/Admin">Admin</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/Admin/HouseKeeping.aspx">House Keeping</a></li>
+                        <li><a class="dropdown-item" href="#">Download User List</a></li>
+                    </ul>
+                </li>
+                  
+                
+              </ul>
+              <div class="navbar-nav">
+                 <asp:Button ID="LogoutBtn" 
+                      CssClass="nav-link mx-2 fw-bold" 
+                      runat="server" Text="LogOut" 
+                      OnClick="LogoutBtn_Click" />
+              </div>
+
+            </div>
+          </div>
+        </nav>
+
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer class="text-center mt-2">
+                <p>&copy; <%: DateTime.Now.Year %> Lateral Management of Computer Consultants</p>
+            </footer>
+        </div>
+    </form>
+
+    <%--Bootstrap Script--%>
+    <script src="/Bootstrap/Js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

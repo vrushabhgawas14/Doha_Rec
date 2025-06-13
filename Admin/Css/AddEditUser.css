@@ -1,0 +1,88 @@
+﻿.CustomPanelCss {
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.form-select {
+    border: 1px solid black;
+    font-size: 14px;
+    background-color: #E7E7FF;
+    color: black;
+    height: 30px;
+}
+
+    .form-select:disabled {
+        background-color: #bfc4dc;
+        cursor: not-allowed;
+        border: 1px solid gray;
+    }
+
+.form-label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #9b9d9e;
+}
+
+    .nav-tabs > li > a {
+        color: #495057;
+        font-weight: bold;
+    }
+
+    .nav-tabs > .nav-item > .nav-link:hover, .nav-item > .nav-link.active {
+        background-color: #212529;
+        color: #dbdade;
+        border: 1px solid black;
+        transition: ease-in-out;
+        transition-duration: 0.2s;
+    }
+
+
+.Alertnative-bg {
+    background-color: #bfc4dc;
+}
+
+.Row-bg {
+    background-color: #E7E7FF;
+}
+
+.Row-hover:hover {
+    background: #979db8; /*light blue*/
+    transition: ease-in;
+    transition-duration: 0.2s;
+}
+
+.custom-pager {
+    background-color: #E7E7FF;
+    color: #333;
+    text-align: center;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+    .custom-pager a,
+    .custom-pager span {
+        display: inline-block;
+        margin: 0 4px;
+        padding: 1px 8px;
+        text-decoration: none;
+        border: 1px solid #212529;
+        border-radius: 4px;
+        transition: background-color 0.2s, color 0.2s;
+        color: #212529;
+    }
+
+        .custom-pager a:hover {
+            background-color: #212529;
+            color: #fff;
+        }
+
+    .custom-pager span {
+        padding: 0px 5px;
+        border: none;
+        color: #212529;
+        font-weight: bold;
+    }
