@@ -1,4 +1,31 @@
 SqlQueries
 
-# Visual Studio 2015/2017 cache/options directory
+# IIS Express
+*.vspscc
 .vs/
+
+# Build Folders
+bin/
+obj/
+
+# User-specific Visual Studio settings
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Package folders (if using `packages.config`-based NuGet)
+packages/
+*.nupkg
+project.lock.json
+
+# VS Code files (if you use it)
+.vscode/
+
+# Logs and temp
+*.log
+*.tmp
+
+# Other
+_ReSharper*/
+*.DotSettings.user

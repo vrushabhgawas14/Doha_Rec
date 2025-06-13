@@ -100,7 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitattributes" />
-    <Content Include=".gitignore" />
     <Content Include="Pages\About.aspx" />
     <Content Include="Admin\AddEditUser.aspx" />
     <Content Include="Admin\Css\AddEditUser.css" />
